@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크태그</title>
+
+    <style>
+        body{
+            height: 5000px;
+            position: absolute;
+        }
+
+        #target-tag {
+            position: absolute;
+            bottom: 100px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <!-- 이동할 페이지, url, 파일경로 입력해도됨 -->
+    <a href="https://naver.com">네이버로이동</a>   
+
+    <!-- _self는 : 기본 값, 현재 페이지에 링크페이지가 나타남. 따라서 안써도 똑같음-->
+    <a href="https://naver.com" target="_self">네이버로이동self</a>
+
+    <!-- _blank : 현재 페이지말고 새로운 페이지에 나타남 -->
+    <a href="https://naver.com" target="_blank">네이버로이동 blank</a>
+
+
+    <!-- iframe과 함께 사용하는 속성들 -->
+    <!-- parent는 한 단계 상위페이지에 나타남 -->
+    <a href="https://naver.com" target="_parent"> 네이버로이동 parent</a>
+    <!-- top은 최상위페이지에 나타남 -->
+    <a href="https://naver.com" target="_top">네이버로이동 top</a>
+    <!-- 최근 iframe은 특수목적 외에는 사용하지 않음. -->
+
+
+    <!-- 주로 스마트폰에서 사용 -->
+    <a href="../img/시나모롤.png">이미지로이동</a>
+    <a href="tel:010-1234-1234">Tel:010-1234-1234</a>
+    <a href="sms:010-1234-1234">SMS:010-1234-1234</a>
+    <a href="mailto:admin@sbsart.com">메일보내기</a>
+
+    <!-- 나중에 사용할 링크자리 남겨놓는법 -->
+    <a href="#">임시링크</a>
+
+    <!-- 클릭하면 해당 섹션으로 이동 -->
+    <a href="#target-tag">타겟으로 이동</a>
+
+
+    <p id="target-tag">타겟입니다.</p>
+
+
+</body>
+</html>
