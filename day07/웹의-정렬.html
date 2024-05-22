@@ -7,7 +7,60 @@
     <link rel="stylesheet" href="../reset.css">
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
 
+        }
+
+        body {
+            padding: 0 32px;
+        }
+
+        tag {
+            display: block;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            height: 200px;
+            background-color: gray;
+            margin-bottom: 16px;
+        }
+
+        .contents-container {
+            display: flex;
+            gap: 16px;
+        }
+
+
+        .contents-left {
+            width: 60%;
+            height: 500px;
+            background-color: gray;
+        }
+        .contents-right {
+            width: 40%;
+            height: 500px;
+            background-color: gray;
+        }
+        
+        @media screen and (max-width : 1400px) {
+            .contents-container{
+                flex-direction: column;
+            }
+            .contents-left {
+                width: 100%;
+            }
+            .contents-right {
+                width: 100%;
+            }
+        }
 
     </style>
     
@@ -25,5 +78,14 @@
         자식요소들의 정렬 방향이 변화한다면 같은 뱡향의 요소들을 묶어 
         새로운 구조를 만들어준다.
       -->
+
+      <tag class="container">
+        <tag class="header"></tag>
+        <tag class="contents-container">
+            <tag class="contents-left"></tag>
+            <tag class="contents-right"></tag>
+        </tag>
+    </tag>
+    
 </body>
 </html>
