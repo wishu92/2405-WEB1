@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+
+    <style>
+        .hi {
+            float: left;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #222;
+
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #222;
+            background-color: pink;
+            float: left;
+
+        }
+
+        .분리 {
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- alt + shift + 방향키(위,아래) = 복사하기 -->
+    <!-- 드래그 + ctrl + D로 같은 문자 다중선택 가능  -->
+    <!-- ctrl + art + 방향키로 동시선택 가능 -->
+    <div class="hi">안녕하세요</div>
+    <div class="hi">안녕하세요</div>
+    <div class="hi">안녕하세요</div>
+    <div class="hi">안녕하세요</div>
+    <div class="hi">안녕하세요</div>
+
+    <!-- 단축완성 기능 div. box 분리 + Enter -->
+    <div class="box 분리">BOX</div>
+    <div class="box">BOX</div>
+    <div class="box">BOX</div>
+    <div class="box">BOX</div>
+
+    <dIv style="clear: both;">테스트</dIv>
+    
+    <div class="container">
+        <!-- 컨테이너 안의 자식들은 유령상태라 <body>가 볼때 높이가 0이다. 넘치는 상태임 -->
+        <div class="box">내부box</div>
+        <div class="box">내부box</div>
+        <div class="box">내부box</div>
+        <div class="box">내부box</div>
+    </div>
+
+    <div>다음에 오는애</div>
+
+    <!-- float 속성은 다양한 문제점을 가지고 있다.
+        요즘 추세로는 많이 사용하지 않음. 
+        예전부터 코딩을 하던분들은 아직도 사용하긴 함.
+        현재 사용하면 뒤떨어진 느낌
+     -->
+
+</body>
+</html>

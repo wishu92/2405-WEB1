@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+
+    <style>
+        .container {
+            border: 1px solid #222;
+            width: 800px;
+            height: 800px;
+            
+            /* display_flex가 자식요소들을 정렬할수있게 만들어준다. */
+            
+        
+            display: flex;
+            justify-content: center spa ;
+            align-items: center;
+            /* justify 가로정렬 , align 세로정렬 : flex-start, center, flex-end 세가지로 사용할 수 있음. */
+            /* justify는 box 간격조절가능 space-evenly(간격을 똑같이) , 
+            between(양끝기준), around(각 테두리가 같은 넓이의 간격을 가짐) 
+            between만 알아도 됨*/
+            
+            gap: 24px;
+            /* box사이의 여백을 직접 지정 */
+
+
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 1px solid #222;
+            box-sizing: border-box;
+            
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- float는 본인이 유령이 되는거라면
+    flex는 자식에게 적용되는 느낌 -->
+
+    <div class="container">
+        <div class="box">box</div>
+        <div class="box">box</div>
+        <div class="box">box</div>
+      
+    </div>
+    
+    <div>test</div>
+</body>
+</html>
