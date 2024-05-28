@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+
+    <style>
+
+        .container {
+            display: flex;
+            /* container 안에 있는 박스들 정렬하기 */
+
+            /* flex-direction: row;  정렬 방향이 가로 (기본값) */
+            flex-direction: column;
+            /* 정렬 방향을 세로로 하려면 column, 기준 축이 세로로 달라짐 */
+            /* 세로기준으로 justify 정렬이 됨 */
+
+            width: 800px;
+            height: 800px;
+            border: 1px solid #222;
+            
+            justify-content: center;
+            /* 세로방향에서 중심에 배치됨 */
+            align-items: center;
+            /* 가로방향에서 중심에 배치 */
+        
+        }
+
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border: 1px solid #222;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- display:flex 정렬 속성을 주기위해 container로 묶어주기 -->
+    <div class="container">
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+        <div class="box">BOX</div>
+    </div>
+   
+</body>
+</html>

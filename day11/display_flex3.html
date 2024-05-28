@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+
+    <style>
+        .container {
+            /* width: 420px; */
+            /* width속성을 주지 않으면 브라우저 크기에 맞춰짐 width 100%가 됨. */
+            height: 800px;
+            border: 1px solid #222;
+            display: flex;
+            /* flex 구부러지는 속성, container안에 박스사이즈가 커도
+            container사이즈에 따라 크기가 줄어듦 따라서 wrap사용 */
+
+            flex-wrap: wrap;
+            /* flex-wrap _ 자식박스 사이즈 보전, 줄바꿈 됨 */
+            /* justify-content: space-between; 도 가능 */
+
+            gap: 8px;
+            /* = 
+            row-gap: 8px;
+            column-gap: 8px; */
+            
+            /* gap은 현재 다른 속성과 중복되어 (예 space-beetween) 화면상 나타나지 않다해도
+             gap속성을 주는 것이 좋음 모바일, 컴퓨터가 유동적이기 때문 */
+
+            align-content: flex-start;
+            /* flex-warp속성을 이용할 때 같이 사용하는 속성 */
+            /* 컨텐츠가 여러줄이 되었을 때 수직방향 정렬(간격)을 다룰 수 있다. */
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 1px solid #222;
+        
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+       <div class="box">BOX</div>
+       <div class="box">BOX</div>
+       <div class="box">BOX</div>
+       <div class="box">BOX</div>
+       <div class="box">BOX</div>
+    </div>
+    <!-- div.container>div.box{BOX}*5 자동완성-->
+ 
+</body>
+</html>

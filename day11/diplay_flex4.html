@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+        }
+
+        .temp-img {
+            background-color: pink;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+
+            flex-shrink: 0;
+            /* shrink는 줄어드는 느낌, 줄어듦을 막아주는 속성 */
+           
+
+        }
+        .comment {
+            /* flex-grow: 1; */
+            /* grow는 자라나는 느낌 */
+            /* 숫자는 같은줄 컨텐츠의 비율 grow속성끼리 비율맞춤, 타 컨텐츠의 크기가 커서 영역을 가져올 수 없으면 안 커짐 */
+            /* '안녕하세요' 글씨 자리를 최대한 크게배치 
+            자연스럽게 같은 줄의 다른 컨텐츠는 양끝에 배치됨 */
+            
+            width: 100%;
+            /* comment에게 남은자리를 다주고, 도형과 버튼이 안찌그러지게 flex-shrink를 주기 */
+        }
+
+        button {
+            flex-shrink: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="temp-img"></div>
+        <p class="comment">안녕하세요</p>
+        <button>삭제</button>
+    </div>
+
+    <div class="container">
+        <div class="temp-img"></div>
+        <p class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga expedita hic optio odit harum, quisquam officia sed libero voluptas? Eaque, aspernatur molestias? Delectus, repellat quidem consectetur non vitae illo animi.</p>
+        <button>삭제</button>
+    </div>
+
+    <div class="container">
+        <div class="temp-img"></div>
+        <p class="comment">안녕하세요</p>
+        <button>삭제</button>
+    </div>
+    
+    <div class="container">
+        <div class="temp-img"></div>
+        <p class="comment">안녕하세요</p>
+        <button>삭제</button>
+    </div>
+
+
+</body>
+</html>
