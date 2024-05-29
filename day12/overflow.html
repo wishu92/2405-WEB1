@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+
+        .box {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #222;
+            
+            overflow: hidden;
+            /* 넘치는 컨텐츠를 높이에 맞게 잘라줌.
+             높이가 없으면 작동하지 않아서 컨텐츠에 맞게 잘라버림 */
+            /* 전체 화면 안에 작은 스크롤화면이 있을 때 
+            (스크롤 화면 안에 작은 스크롤 화면이 있을 때) 높이지정해서 같이 쓰임.  */
+            
+            /* overflow-y: scroll; */
+            /* overflow-y축 (세로)만 스크롤 생성 */
+
+            overflow: auto;
+
+            /* hidden : 컨테이너 밖으로 넘친 요소를 숨겨준다.
+               scroll : 스크롤을 만들어 넘친 요소를 탐색할 수 있게함. 컨텐츠가 안넘쳐도 스크롤바를 만듦. 
+               auto   : 컨테이너 밖으로 넘칠 때만 스크롤바를 만들어준다. */
+
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sint cumque sunt quas atque quasi voluptate quaerat, quos eveniet non quibusdam iusto temporibus asperiores rem. Beatae eligendi magni ratione ducimus.
+    </div>
+</body>
+</html>

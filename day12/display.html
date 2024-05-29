@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+
+    <style>
+        .box {
+            width: 200px;
+            height:  200px;
+            background-color: pink;
+
+            line-height: 200px;
+            /* line-height 줄높이를 box 전체크기와 같이 높여서 글씨가 가운데 오도록함. */
+            /* 흔히 행간을 설정하는 속성으로 알고 있지만 
+             사실 줄 높이를 설정하는 속성임. (세로방향) */
+
+            text-align: center;
+            /* 텍스트만 해당 줄의 센터로 (가로방향) */
+            
+            /* vertical-align: middle; 
+             = 세로정렬로 검색하면 나오긴 하는데, 
+             테이블에서만 쓸 수 있는 속성이라 활용 불가능 */
+        }
+
+
+        .box-block {
+            display: block;
+        }
+
+        .box-inline {
+            display: inline;
+            /* 바람빠진풍선, 텍스트 크기에 맞춰 줄어듦. 
+            높이,넓이가 지정되어있으나 작동안함 */
+        }
+
+        .box-inline-block {
+            display: inline-block;
+        }
+
+        .box-none {
+            display: none;
+            /* 내부 요소와 공간까지도 표시하지 않음. 아예 실체가 없게 함 */
+            /* visibility: hidden; = 컨텐츠를 안보이게 투명하게 함 
+             (따라서 공간은 안보이지만 존재함.) */
+             /* opacity 0부터1(100%)사이의 값을 이용해 투명도를 조절할 수 있음 
+              애니매이션 효과 부여 가능. 따라서 visibility는 잘 사용하지않음.*/
+        }
+
+    </style>
+</head>
+<body>
+    <!-- div는 블록속성 , 복사는 shift + art + 방향키-->
+    <!-- ctrl + 방향키 이동하면 한 단어씩 -->
+    <div class="box box-block">block</div>
+    <div class="box box-inline">inline</div>
+    <div class="box box-inline-block">inline-block</div>
+    <div class="box box-none">none</div>
+    <!-- class box 띄어쓰기 box-none = box따로 box-none따로 css를 줄 수 있다. -->
+</body>
+</html>
