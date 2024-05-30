@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+
+    .test-button[type] {
+        background-color: pink;
+    }
+
+    </style>
+</head>
+<body>
+     <img id="img-id" class="img-class" src="주소" alt="대채텍스트">
+     <!-- img#img-id.img-class + enter 자동완성 -->    
+
+    <!-- 
+        * : 전체 선택자. 초기화 용도로 사용한다 (ex *{margin 0, padding 0})
+        img : 태그 선택자. 특정 태그를 초기화 하는데에 사용 (ex img{display : block;} 등)
+        #img-id : id 선택자. 유니크한 값으로 높은 우선순위를 가진다.
+        .img class : class 선택자. 가장 일반적으로 사용하는 형태
+     -->
+
+
+
+     <div class="container">
+        <div class="hi hello">
+        <!-- 단축키 div.hi.hello -> hi와 hello따로 선택자 지정할 수 있음. -->
+        <div class="bye"></div>
+        </div>        
+     </div>
+
+     <!-- 
+        후손선택자 : [.container .bye] (0) [.hi .bye] (0) : 띄어쓰기로 작동, 뿌리만 맞으면 작동
+        자손(자식)선택자 : [.container>.bye] (x) [.hi>.bye](0) : >로 작동, 바로 아래 자식일 경우만 작동 
+
+        후존, 자손 선택자는 css를 구조적으로 만들어 줄 수 있는 반면,
+        남용하게 되면 유지보수가 힘들어질 수 있으니 너무 많은 단계를 쓰는 것은 지양
+      
+        [.hi.hello] 띄어쓰기가 중간에 없음. 후손선택자 아님, .hi이면서 .hello인 경우만 적용.
+         (ex [#img-id.class-id])
+    -->
+
+
+
+    <input class="test-button"type="button" value="버튼">
+    <!--
+        속성선택자 : 속성을 가지고 있는 개체를 대상으로 함, []사용함, 위의 하늘색 글씨가 다 속성임
+        (ex   [type]  혹은  .test-button[type]) 
+        type이라는 속성을 가진 선택자가 많기 때문에 후자처럼 조금 더 디테일하게 설정해야함.)
+    
+        [type='button'] : 속성이 문자열과 같을 때
+        [type~='button'] : 띄어쓰기 구분해 해당 문자열이 포함되어있을 때
+        [type|='button'] : 속성이 문자열과 같거나, 문자열 뒤에-(하이픈)이 붙을 때
+        [type^='button'] : 해당 문자열로 시작할 때
+        [type$='button'] : 해당 문자열로 끝날 때
+        [type*='button'] : 해당 문자열이 포함될 때        
+        (잘안씀)
+    -->
+    <!-- shift + 원화표기 = | -->
+
+
+    <div class="container">
+        <div class="첫째">첫째</div>
+        <div class="둘째">둘째</div>
+        <div class="셋째">셋째</div>
+        <div class="넷째">넷째</div>
+        <!-- 한번에 줄바꿈 문장 맨 뒤 커서 + art + 방향키 -->
+    </div>
+    <!-- 
+        동위선택자
+        1..첫째 + .둘째 : 첫째 뒤에 바로 둘째가 붙어있을 경우 둘째에 적용.
+        2. .첫째 ~ .셋째 : 셋째 앞에 첫째가 있기만 하면 셋째에 적용.
+    -->
+</body>
+</html>

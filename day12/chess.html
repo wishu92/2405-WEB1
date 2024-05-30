@@ -13,6 +13,8 @@
         }
         .row {
             display: flex;
+            /* 자동 가로정렬 */
+
         }
 
         .cell {
@@ -22,6 +24,7 @@
             box-sizing: border-box;
         }
 
+        /* 가로정렬된 row의 짝수(2n) 줄마다. 홀수(2n+1) 칸에 검정색 넣기 */
         .row:nth-child(2n) > .cell:nth-child(2n+1) {
             background-color: #222;
         }
