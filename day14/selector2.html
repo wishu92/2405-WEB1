@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../reset.css"> -->
+    <style>
+        div:nth-child(3) {
+            color: brown;
+        }
+        /* div이면서 3째일경우 색표시 */
+        div:nth-of-type(3) {
+            color: brown;
+            /* div중에 3번째인 경우 색표시 */
+        }
+
+
+        /* 반응선택자 예시 */
+        .reaction-box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .reaction-box:hover {
+            background-color: coral;
+
+        }
+
+        .reaction-box:active {
+            background-color: red;
+        }
+
+        .reaction-container:hover > h3 {
+            color: blueviolet;
+        }
+        .reaction-container:hover > p {
+            color: red;
+        }
+        
+
+        /* 상태선택자 예시 p166 */
+        input:enabled {
+            /* input 태그의 배경색, 글자색 */
+            background-color: blue;
+            color: white;
+        }
+
+        input:disabled {
+
+            background-color: black;
+        }
+
+        input:focus {
+            /* 선택, 클릭했을 때 배경색상 변경 */
+            background-color: orange;
+        }
+
+        a:link {
+            color: pink;
+        }
+        a:visited {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        접두
+        : first, last, nth, nth-last
+
+        nth : n번째 (ex. 10th)
+        nth-last : 뒤에서부터 n번째
+
+        접미
+        : child, of-type
+        
+        child : 자식 (내가 몇번째 자식인지가 중요)
+        of-type : 유형 (내가 몇번째로 등장하는지가 중요)
+     -->
+    
+     <section class="container">
+        <div class="첫째">1</div>
+        <div class="둘째">2</div>
+        <p class="셋째">3</p>
+        <div class="넷째">4</div>
+     </section>
+
+
+
+     <!-- 
+        반응 선택자
+        선택자 : active -> 클릭중일 때
+        선택자 : hover  -> 마우스를 올렸을 때
+      -->
+
+      <div class="reaction-box">
+        반응선택자
+      </div>
+
+      <div class="reaction-container">
+        <h3>반응하는 제목</h3>
+        <p>반응하는 본문 영역</p>
+      </div>
+
+
+      <!-- 
+        상태 선택자 : input의 부수속성
+        :checked    -체크박스등이 체크되어있을 때 (ex.day13 dropdown)
+        :focus      -포커스를 가지고 있을 때
+        :enabled    -활성화된 컨텐츠일 때
+        :disabled   -비활성화된 컨텐츠일 때
+
+       -->
+
+    <h3>enabled</h3>
+    <p>
+        <input type="text" >
+    </p>
+
+    <h3>disabled</h3>
+    <p>입력을 할 수 없는 상태로 만들기
+        <input disabled="disabled" >
+    </p>
+    
+    <!-- 링크 선택자 -->
+    <a href="https://naver.com">검색한적있는곳</a>
+    <a href="https://op.gg">검색한적없는곳</a>
+
+    <!--
+        문자선택자
+        ::first-letter - 안씀. 첫번째 글씨에 속성 적용
+        ::first-line   - 안씀. 첫번째 줄에 속성 적용
+        ::after        - 본래용도는 앞, 뒤에 텍스트를 넣기위한 선택자. 하지만 디자인만을 위한 태그를 만드는 대신 사용하기 좋음.
+        ::before         텍스트속성이라 기본적으로 inline속성, 태그없이 어떤 글이나 모양뒤에 바로 디자인을 붙일 수 있음.
+        ::selection    - 드래그한 영역의 배경, 텍스트 색 등 디자인 적용
+      -->
+
+      <div class="after-container">안녕하세요</div>
+
+
+    <!-- 
+        부정선택자 (몰라도됨)
+        선택자:not(선택자) - 괄호안 선택자만 제외하고 디자인을 적용하겠다.
+     -->
+
+
+
+</body>
+</html> 
