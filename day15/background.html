@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .background-box {
+            width: 500px;
+            height: 50vh;
+            border: 1px solid #222;
+            background-image: url(../img/시나모롤.png);
+            /* (넓이 높이지정없이) background-image만으로는 크기를 가지지못함. */
+
+            /* background-size: 100% 100%; */
+            /* 앞 100%가 x축(width), 뒤100% y축(height) - 잘 안씀 */
+
+            background-size: cover;
+            /* 
+            background-size: 배경의 크기를 다룰 수 있게 해주는 속성
+            contain : 배경을 유동적으로 늘리거나 줄여 비율을 유지, 빈 공간이 있을 수 있지만 이미지가 잘리지 않고 전부보이도록 함.
+            cover : 배경을 유동적으로 늘려 비율은 유지, 이미지가 잘려도 빈 공간이 없도록 함.
+            */
+
+            /* background-image 속성은 포토샵의 레이어처럼 여러 이미지를 중첩할 수 있다. p175 */
+
+
+            background-repeat: no-repeat; 
+            /* 기본적으로 background-img는 반복속성을 가짐, no-repeat 반복안함  */
+         }
+        
+
+            /* 
+            스트라이프 이미지 : 웹의 이미지,아이콘들을 사진 한 장으로 묶어 용량을 효율적으로 관리하는 방식.
+                            요즘은 인터넷 속도나 용량제한이 발달되어 의미가 많이 퇴색되었다.
+            */
+
+    </style>
+</head>
+<body>
+   
+    <div class="background-box"></div>
+    
+</body>
+</html>
